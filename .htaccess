@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteRule ^([0-9a-zA-Z-_]+).html$ index.php?do=konu&link=$1
+RewriteRule ^kategori/([0-9a-zA-Z-_]+)(/?)$ index.php?do=kategori&link=$1
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([0-9a-zA-Z-_]+)(/?)$ index.php?do=$1
+
